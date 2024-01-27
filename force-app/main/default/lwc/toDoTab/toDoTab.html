@@ -1,0 +1,16 @@
+<template>
+    <template for:each={taskList} for:item="task">
+        <div key={task.Id} class="slds-card slds-m-bottom_medium slds-p-left_large">
+            <lightning-card >
+                <h1><strong>Task Name:</strong> <lightning-formatted-url value={task.taskUrl} tooltip="Visit Task" label={task.Name}></lightning-formatted-url></h1>
+                <p><strong>Created At:</strong>  <lightning-formatted-date-time value={task.Task_Timestamp__c} year="2-digit" month="short" day="2-digit" weekday="long"></lightning-formatted-date-time></p>
+                <p><strong>Deadline:</strong> <lightning-formatted-date-time value={task.Task_Deadline__c}></lightning-formatted-date-time></p>
+                <p><strong>Assigned By:</strong> {task.Assignee__r.Name}</p>    
+                <p><strong>Priority<lightning-icon icon-name="utility:warning" alternative-text="Warning!" variant="warning"
+                    title="warning variant x-small" size="x-small"></lightning-icon>:</strong> {task.Priority__c}</p>
+                <br />
+                <lightning-button variant="brand" label="Show Task" title="Show Description" class="slds-m-top_x-large" onclick={onShowDescription} data-task-id={task.Id}></lightning-button>
+            </lightning-card>
+        </div>
+    </template>
+</template> 

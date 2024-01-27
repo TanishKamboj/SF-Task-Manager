@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Search Tasks!">
+            <lightning-select
+                    label="Sort By?"
+                    value={value}
+                    options={options}
+                    onchange={handleChange} class="slds-p-around--medium">
+            </lightning-select>
+        <br />
+        <lightning-button variant="brand" label="Submit" onclick={handleSubmit} class="slds-m-top--large"></lightning-button>
+    </lightning-card>
+</template>

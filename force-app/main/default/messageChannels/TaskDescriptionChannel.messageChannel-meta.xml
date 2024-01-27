@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+   <masterLabel>TaskDescriptionChannel</masterLabel>
+   <isExposed>true</isExposed>
+   <description>This Lightning Message Channel sends Task ID</description>
+   <lightningMessageFields>
+        <fieldName>taskid</fieldName>
+        <description>This is task id field</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
